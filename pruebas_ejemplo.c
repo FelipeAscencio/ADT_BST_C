@@ -1,6 +1,7 @@
 #include "pruebas.h"
 #include "src/abb.h"
 #include "src/abb_estructura_privada.h"
+#include <stdio.h>
 
 #define MENOR -1
 #define IGUAL 0
@@ -198,6 +199,7 @@ void abb_no_esta_vacio(abb_t *arbol) {
 
 void abb_tamanio_funcion(abb_t *arbol) {
   size_t tamanio = abb_tamanio(arbol);
+  printf("TAMANIO ACTUAL %zu\n", tamanio);
   pruebas_afirmar(
       tamanio == TAMANIO_ESPERADO_POR_FUNCION,
       "La funcion de tamanio esta devolviendo el valor correcto.\n");
