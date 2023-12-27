@@ -66,7 +66,7 @@ void no_elimina_si_no_esta_el_elemento() {
   void *elemento_buscado = &valor_buscado;
   arbol = abb_insertar(arbol, puntero_1);
   if (arbol->nodo_raiz != NULL) {
-    void *elemento_prueba = abb_quitar(arbol, elemento_buscado);
+    abb_quitar(arbol, elemento_buscado);
   }
   pruebas_afirmar(arbol->nodo_raiz != NULL,
                   "No se puede eliminar un elemento que no esta en el ABB.\n");
@@ -89,7 +89,7 @@ void no_se_encuentra_elemento() {
   void *elemento_buscado = &valor_buscado;
   arbol = abb_insertar(arbol, puntero_1);
   void *elemento_conseguido = abb_buscar(arbol, elemento_buscado);
-  pruebas_afirmar(elemento_prueba == NULL,
+  pruebas_afirmar(elemento_conseguido == NULL,
                   "El elemento no se encuentra en el ABB.\n");
   abb_destruir(arbol);
 }
@@ -123,7 +123,7 @@ void abb_cada_elemento_y_recorrido_nulos() {
 
 abb_t *crear_abb(abb_t *arbol) {
   arbol = abb_crear(comparador);
-  pruebas_afirmar(abb != NULL, "El ABB se inicializo correctamente.\n");
+  pruebas_afirmar(arbol != NULL, "El ABB se inicializo correctamente.\n");
   return arbol;
 }
 
