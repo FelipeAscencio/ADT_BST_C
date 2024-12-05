@@ -6,8 +6,6 @@
 bash .tests/test.sh
 ```
 
----
-
 ## Introduction
 
 The idea of ​​the project was to be able to provide the user with the implementation of a Binary Search Tree, with all its corresponding functions and in a 100% functional way.
@@ -46,7 +44,7 @@ The tree can be traversed in 3 ways: "PREODER, INORDER, POSTORDER".
 
 ---
 
-## Testing
+# Testing
 
 For test the code, i implemented my own tests.
 
@@ -54,13 +52,13 @@ In the repository actions you can see the status of the executed tests.
 
 Also add the analysis with valgrind to see if you have memory leaks, since the program uses dynamic memory.
 
-### The comparator used for testing works like this:
+## The comparator used for testing works like this:
 
 The comparator used in the "tests" casts the "void*" to "int" and compares the elements, so for all the tests carried out by this means, a vital condition is that every element to be inserted is of the character "int*" (passed by parameter like "void*").
 
 ---
 
-## Types of routes implemented in the ADT
+# Types of routes implemented in the ADT
 
 Preorder: In the preorder traversal, we first visit the root node, then traverse the left subtree, and finally the right subtree. That is, a node is processed before its children.
 
@@ -70,7 +68,7 @@ Postorder: In postorder traversal, we first traverse the left subtree, then the 
 
 ---
 
-## Functions
+# Functions
 
 First of all, it is important to clarify something, in order to reduce the amount of information in the explanations below, corresponding to each function, the best case of its execution is contemplated.
 
@@ -84,7 +82,7 @@ Although we do not implement the tree balancing algorithm, we have this consider
 
 It is important to make this clarification because if the tree is loaded in a certain way, what will happen is that it can "Degenerate into a List", making the tree behave very similar to a list and the complexity of this type of functions becomes O(n).
 
-### Computational complexity
+## Computational complexity
 
 I am going to make a list of the computational complexities in "BIG O" notation of each implemented function.
 
@@ -107,5 +105,3 @@ I am going to make a list of the computational complexities in "BIG O" notation 
 - abb_con_cada_elemento = O(n).
 
 - abb_recorrer = O(n).
-
----
